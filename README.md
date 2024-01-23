@@ -1,4 +1,4 @@
-![Jurisoft](.github/jurisoft-logo.svg)
+![Jurisoft](.github/jurisoft-logo.svg =250x52)
 
 ![Version](https://img.shields.io/badge/1.0.0-beta?label=version)
 ![Jurisoft](https://img.shields.io/badge/powered_by-Jurisoft-ff4a00)
