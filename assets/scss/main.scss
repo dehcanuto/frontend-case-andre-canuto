@@ -1,6 +1,11 @@
 @import './colors';
 @import './layouts';
 
+body {
+    font-family: 'Inter';
+    margin: 0;
+}
+
 aside {
     display: flex;
     flex-direction: column;
@@ -9,6 +14,54 @@ aside {
     height: 100%;
     background: #fff;
     border-right: 1px solid $stroke-soft;
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        height: 100%;
+        > div + div,
+        .main > div + div {
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid $stroke-soft;
+        }
+        .main {
+            .menu {
+                h2 {
+                    color: $text-400;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+                ul {
+                    padding-left: 0;
+                    list-style: none;
+                }
+                .menu-item {
+                    display: flex;
+                    padding: 8px 12px;
+                    align-items: center;
+                    color: $text-500;
+                    font-size: 14px;
+                    text-decoration: none;
+                    background: transparent;
+                    border-radius: 8px;
+                    .label {
+                        .icon {
+                            margin-right: 10px;
+                        }
+                    }
+                    &.router-link-active {
+                        background: $bg-weak-100;
+                        .icon {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 main {
@@ -20,4 +73,33 @@ main {
     display: flex;
     overflow: hidden;
     height: 100vh;
+}
+
+.top-sidebar {
+    display: flex;
+    justify-content: space-between;
+    .info {
+        margin: auto;
+        margin-left: 10px;
+        h1, p {
+            margin: 0;
+        }
+        h1 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        p {
+            color: $text-500;
+            font-size: 12px;
+        }
+    }
+    .action {
+        display: flex;
+        button {
+            padding: 10px;
+            margin: auto;
+            background: #fff;
+            border: none;
+        }
+    }
 }
