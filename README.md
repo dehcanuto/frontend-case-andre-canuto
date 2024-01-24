@@ -22,7 +22,7 @@ yarn install
 yarn dev
 ```
 
-## Requisitos do Desafio
+## 🎯 Requisitos do Desafio
 
 ### Estrutura do Layout
 - Desenvolva uma tela responsiva que se adapte a diversos tamanhos de dispositivos. ( Opcional )
