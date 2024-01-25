@@ -4,7 +4,7 @@
       title="Rastreador de tempo"
       icon="timer-rush"
       button-title="Histórico">
-      <p>Teste</p>
+      <TimeTracker />
     </Card>
     <div class="col">
       <Card

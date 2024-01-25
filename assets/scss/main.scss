@@ -5,7 +5,7 @@
 // @use 'colors';
 // @use 'layouts';
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     margin: 0;
 }
 
@@ -147,6 +147,11 @@ main {
         color: #fff;
         background: $theme-color;
         border-color: $theme-color;
+        &-outline {
+            color: $theme-color;
+            background: transparent;
+            border: none;
+        }
     }
     &-outline {
         background: transparent;
@@ -166,6 +171,59 @@ main {
         .infos {
             display: flex;
             gap: 10px
+        }
+    }
+}
+
+.time-tracker {
+    overflow: hidden;
+    margin-top: 10px;
+    border: 1px solid $stroke-soft;
+    border-radius: 10px;
+    .header {
+        padding: 5px 15px;
+        padding-right: 5px;
+        background: $bg-weak-100;
+        border-bottom: 1px solid $stroke-soft;
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            h3 {
+                color: $text-500;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    .content {
+        text-align: center;
+        margin: 20px 0;
+        h4 {
+            color: $text-400;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        button {
+            cursor: pointer;
+            margin: auto;
+            &:hover {
+                background: $bg-weak-100;
+            }
+        }
+        .actions {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .clock {
+        span {
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: -3px;
+        }
+        .seconds {
+            color: $text-400;
         }
     }
 }

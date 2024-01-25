@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const emit = defineEmits(['click']);
+
 defineProps({
   type: String,
   class: String,
@@ -10,7 +12,7 @@ defineProps({
   <button
     type="button"
     :class="`btn btn-${type}`" 
-    @click="() => $emit('click')">
+    @click="() => emit('click')">
     <JurIcon v-if="icon" :icon="icon" />
     <slot />
   </button>

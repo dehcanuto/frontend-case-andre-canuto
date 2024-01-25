@@ -16,3 +16,5 @@ export { default as Timer } from './TimerIcon.vue';
 export { default as Courses } from './CoursesIcon.vue';
 export { default as Bests } from './BestsIcon.vue';
 export { default as Feedback } from './FeedbackIcon.vue';
+export { default as Play } from './PlayIcon.vue';
+export { default as MondayLogo } from './MondayLogoIcon.vue';
