@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import JurIcon from '../components/JurIcon.vue';
-
-</script>
-
 <template>
   <div class="main-header">
     <UserThumb

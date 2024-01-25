@@ -11,3 +11,7 @@ export { default as Calendar } from './CalendarIcon.vue';
 export { default as Notification } from './NotificationIcon.vue';
 export { default as Plus } from './PlusIcon.vue';
 export { default as Search } from './SearchIcon.vue';
+export { default as TimerRush } from './TimerRushIcon.vue';
+export { default as Timer } from './TimerIcon.vue';
+export { default as Courses } from './CoursesIcon.vue';
+export { default as Bests } from './BestsIcon.vue';

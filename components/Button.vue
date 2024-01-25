@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   type: String,
   class: String,
   icon: String
@@ -9,9 +9,9 @@ const props = defineProps({
 <template>
   <button
     type="button"
-    :class="`btn btn-${props.type}`" 
+    :class="`btn btn-${type}`" 
     @click="() => $emit('click')">
     <JurIcon v-if="icon" :icon="icon" />
-    <slot></slot>
+    <slot />
   </button>
 </template>

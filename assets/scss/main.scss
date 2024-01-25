@@ -1,10 +1,17 @@
 @import './colors';
 @import './layouts';
+
+// - [ ] TODO: optimize with @use.
 // @use 'colors';
 // @use 'layouts';
 
-@mixin rowSpaced($direction: column) {
+h1, h2, h3, p {
+    margin: 0;
+}
+
+@mixin rowSpaced($direction: column, $align: center) {
     display: flex;
+    align-items: $align;
     justify-content: space-between;
     flex-direction: $direction;
 }  
@@ -23,7 +30,7 @@ aside {
     background: #fff;
     border-right: 1px solid $stroke-soft;
     .sidebar {
-        @include rowSpaced;
+        @include rowSpaced($align: initial);
         flex-direction: column;
         padding: 20px;
         height: 100%;
@@ -39,7 +46,7 @@ aside {
                     padding-left: 0;
                     list-style: none;
                 }
-                .menu-item {
+                &-item {
                     display: flex;
                     padding: 8px 12px;
                     align-items: center;
@@ -72,16 +79,24 @@ main {
     overflow-y: auto;
 }
 
-.main-view {
-    display: flex;
-    overflow: hidden;
-    height: 100vh;
-    .main-header {
+.main {
+    &-view {
+        display: flex;
+        overflow: hidden;
+        height: 100vh;
+    }
+    &-header {
         @include rowSpaced($direction: row);
         .actions {
             display: flex;
             gap: 12px;
         }
+    }
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 1rem;
+        gap: 1rem;
     }
 }
 
@@ -108,12 +123,8 @@ main {
     .info {
         margin: auto;
         margin-left: 10px;
-        h1, p {
-            margin: 0;
-        }
         h1 {
             font-size: 14px;
-            margin-bottom: 5px;
         }
         p {
             color: $text-500;
@@ -140,5 +151,17 @@ main {
     &-outline {
         background: transparent;
         border: none;
+    }
+}
+
+.card {
+    padding: 10px;
+    border: 1px solid $stroke-soft;
+    border-radius: 16px;
+    .header {
+        @include rowSpaced($direction: row);
+        h3 {
+            font-size: 16px;
+        }
     }
 }

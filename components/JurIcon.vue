@@ -26,6 +26,10 @@ const iconList = new Map<string, any>([
     ['notification', _icon.Notification],
     ['plus', _icon.Plus],
     ['search', _icon.Search],
+    ['timer-rush', _icon.TimerRush],
+    ['timer', _icon.Timer],
+    ['courses', _icon.Courses],
+    ['bests', _icon.Bests]
 ]);
 
 function selectedIcon() {
