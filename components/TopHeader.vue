@@ -6,14 +6,14 @@
       description="Bem-vinda de volta 👋🏻"
     />
     <div class="actions">
-      <Button type="outline" icon="search" />
-      <Button type="outline" icon="notification" />
-      <Button icon="calendar">
+      <BaseButton type="outline" icon="search" />
+      <BaseButton type="outline" icon="notification" />
+      <BaseButton icon="calendar">
         Calendário
-      </Button>
-      <Button type="primary" icon="plus">
+      </BaseButton>
+      <BaseButton type="primary" icon="plus">
         Nova Solicitação
-      </Button>
+      </BaseButton>
     </div>
   </div>
 </template>

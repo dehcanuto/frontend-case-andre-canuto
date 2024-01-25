@@ -14,7 +14,7 @@ defineProps({
                 <JurIcon v-if="icon" :icon="icon" />
                 <h3>{{ title }}</h3>
             </div>
-            <Button v-if="buttonTitle">{{ buttonTitle }}</Button>
+            <BaseButton v-if="buttonTitle">{{ buttonTitle }}</BaseButton>
         </div>
         <slot />
     </div>
