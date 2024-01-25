@@ -23,28 +23,31 @@ const { data } = await useFetch('/api/menu')
             </button>
           </div>
         </div>
-        <div class="menu">
-          <h2>Main</h2>
-          <ul>
-            <li v-for="(item, index) in data">
-              <NuxtLink :key="index" :to="item.to" class="menu-item">
-                <div class="label">
-                  <JurIcon :icon="item.icon" class="icon" />
-                  {{ item.label }}
-                </div>
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="top-sidebar">
-        <div class="flex">
-          <img src="/assets/images/jurisoft-icon.svg" alt="Jurisoft Lofo" />
-          <div class="info">
-            <h1>Sophia Williams</h1>
-            <p>sophia@jurisoft.com</p>
+        <div class="menu divider-top">
+          <div>
+            <h2>Main</h2>
+            <ul>
+              <li v-for="(item, index) in data">
+                <NuxtLink :key="index" :to="item.to" class="menu-item">
+                  <div class="label">
+                    <JurIcon :icon="item.icon" class="icon" />
+                    {{ item.label }}
+                  </div>
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>FAV</h2>
           </div>
         </div>
+      </div>
+      <div class="top-sidebar divider-top">
+        <UserThumb
+          image="/users/user-girl-1.jpeg"
+          name="Sophia Williams"
+          description="sophia@jurisoft.com"
+        />
         <div class="action">
           <button type="button">
             <JurIcon icon="arrow" />

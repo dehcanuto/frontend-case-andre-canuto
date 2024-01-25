@@ -20,12 +20,6 @@ aside {
         justify-content: space-between;
         padding: 20px;
         height: 100%;
-        > div + div,
-        .main > div + div {
-            margin-top: 1rem;
-            padding-top: 0.5rem;
-            border-top: 1px solid $stroke-soft;
-        }
         .main {
             .menu {
                 h2 {
@@ -52,6 +46,7 @@ aside {
                             margin-right: 10px;
                         }
                     }
+                    &:hover,
                     &.router-link-active {
                         background: $bg-weak-100;
                         .icon {
