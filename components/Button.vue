@@ -2,6 +2,7 @@
 const props = defineProps({
   type: String,
   class: String,
+  icon: String
 })
 </script>
 
@@ -10,6 +11,7 @@ const props = defineProps({
     type="button"
     :class="`btn btn-${props.type}`" 
     @click="() => $emit('click')">
+    <JurIcon v-if="icon" :icon="icon" />
     <slot></slot>
   </button>
 </template>

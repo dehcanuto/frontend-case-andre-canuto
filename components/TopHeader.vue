@@ -11,18 +11,12 @@ import JurIcon from '../components/JurIcon.vue';
       description="Bem-vinda de volta 👋🏻"
     />
     <div class="actions">
-      <Button type="outline">
-        <JurIcon icon="search" />
-      </Button>
-      <Button type="outline">
-        <JurIcon icon="notification" />
-      </Button>
-      <Button>
-        <JurIcon icon="calendar" />
+      <Button type="outline" icon="search" />
+      <Button type="outline" icon="notification" />
+      <Button icon="calendar">
         Calendário
       </Button>
-      <Button type="primary">
-        <JurIcon icon="plus" />
+      <Button type="primary" icon="plus">
         Nova Solicitação
       </Button>
     </div>
