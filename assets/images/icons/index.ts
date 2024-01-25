@@ -7,3 +7,7 @@ export { default as Times } from './TimesIcon.vue';
 export { default as Integracoes } from './IntegracoesIcon.vue';
 export { default as Beneficios } from './BeneficiosIcon.vue';
 export { default as Documentos } from './DocumentoIcon.vue';
+export { default as Calendar } from './CalendarIcon.vue';
+export { default as Notification } from './NotificationIcon.vue';
+export { default as Plus } from './PlusIcon.vue';
+export { default as Search } from './SearchIcon.vue';
