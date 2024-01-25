@@ -10,11 +10,11 @@ defineProps({
 <template>
     <div class="card">
         <div class="header">
-            <div>
+            <div class="infos">
                 <JurIcon v-if="icon" :icon="icon" />
                 <h3>{{ title }}</h3>
             </div>
-            <Button>{{ buttonTitle }}</Button>
+            <Button v-if="buttonTitle">{{ buttonTitle }}</Button>
         </div>
         <slot />
     </div>

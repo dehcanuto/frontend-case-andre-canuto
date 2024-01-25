@@ -6,7 +6,7 @@
       button-title="Histórico">
       <p>Teste</p>
     </Card>
-    <div>
+    <div class="col">
       <Card
         title="Horas diárias de trabalho"
         icon="timer"
@@ -26,5 +26,18 @@
       button-title="Enviar">
       <p>Teste</p>
     </Card>
+    <div class="col-span-2">
+      <Card
+        title="Cursos"
+        icon="courses"
+        button-title="Ver todos">
+        <p>Teste</p>
+      </Card>
+    </div>
+      <Card
+        title="Feedback diário"
+        icon="feedback">
+        <p>Teste</p>
+      </Card>
   </div>
 </template>
