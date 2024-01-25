@@ -1,5 +1,13 @@
 @import './colors';
 @import './layouts';
+// @use 'colors';
+// @use 'layouts';
+
+@mixin rowSpaced($direction: column) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: $direction;
+}  
 
 body {
     font-family: 'Inter';
@@ -15,9 +23,8 @@ aside {
     background: #fff;
     border-right: 1px solid $stroke-soft;
     .sidebar {
-        display: flex;
+        @include rowSpaced;
         flex-direction: column;
-        justify-content: space-between;
         padding: 20px;
         height: 100%;
         .main {
@@ -69,11 +76,17 @@ main {
     display: flex;
     overflow: hidden;
     height: 100vh;
+    .main-header {
+        @include rowSpaced($direction: row);
+        .actions {
+            display: flex;
+            gap: 12px;
+        }
+    }
 }
 
 .top-sidebar {
-    display: flex;
-    justify-content: space-between;
+    @include rowSpaced($direction: row);
     .action {
         display: flex;
         button {
@@ -106,5 +119,23 @@ main {
             color: $text-500;
             font-size: 12px;
         }
+    }
+}
+
+.btn {
+    padding: 10px;
+    font-size: 14px;
+    color: $text-500;
+    background: #fff;
+    border: 1px solid $stroke-soft;
+    border-radius: 10px;
+    &-primary {
+        color: #fff;
+        background: $theme-color;
+        border-color: $theme-color;
+    }
+    &-outline {
+        background: transparent;
+        border: none;
     }
 }

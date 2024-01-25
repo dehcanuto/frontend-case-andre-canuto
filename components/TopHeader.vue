@@ -1,15 +1,30 @@
+<script setup lang="ts">
+import JurIcon from '../components/JurIcon.vue';
+
+</script>
+
 <template>
-  <div class="main-header flex justify-between">
+  <div class="main-header">
     <UserThumb
       image="/users/user-girl-1.jpeg"
       name="Sophia Williams"
       description="Bem-vinda de volta 👋🏻"
     />
-    <div class="">
-      <button type="button">Buscar</button>
-      <button type="button">Notificações</button>
-      <button type="button">Calendário</button>
-      <button type="button">Nova Solicitação</button>
+    <div class="actions">
+      <Button type="outline">
+        <JurIcon icon="search" />
+      </Button>
+      <Button type="outline">
+        <JurIcon icon="notification" />
+      </Button>
+      <Button>
+        <JurIcon icon="calendar" />
+        Calendário
+      </Button>
+      <Button type="primary">
+        <JurIcon icon="plus" />
+        Nova Solicitação
+      </Button>
     </div>
   </div>
 </template>

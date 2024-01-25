@@ -36,12 +36,12 @@ yarn dev
   - Feedback diário.
 
 ### Componentes Modulares
-- Utilize Nuxt 3 para construir componentes reutilizáveis e modulares.
+✅ - Utilize Nuxt 3 para construir componentes reutilizáveis e modulares.
 - Cada seção da tela deve ser um componente isolado.
 
 ### Estilização com SCSS
-- Utilize SCSS para criar estilos escaláveis e de fácil manutenção.
-- Aplique variáveis SCSS, mixins e aninhamento quando apropriado.
+✅ - Utilize SCSS para criar estilos escaláveis e de fácil manutenção.
+✅ - Aplique variáveis SCSS, mixins e aninhamento quando apropriado.
 - Garanta que a estilização seja consistente e alinhada com a imagem fornecida.
 
 ### Interatividade

@@ -7,7 +7,8 @@ import * as _icon from '../assets/images/icons';
         type: String,
         required: true,
     },
-    class: String
+    class: String,
+    alt: String,
 })
 
 const Icon = computed(() => selectedIcon());
@@ -20,7 +21,11 @@ const iconList = new Map<string, any>([
     ['times', _icon.Times],
     ['integracoes', _icon.Integracoes],
     ['beneficios', _icon.Beneficios],
-    ['documentos', _icon.Documentos]
+    ['documentos', _icon.Documentos],
+    ['calendar', _icon.Calendar],
+    ['notification', _icon.Notification],
+    ['plus', _icon.Plus],
+    ['search', _icon.Search],
 ]);
 
 function selectedIcon() {
@@ -29,5 +34,5 @@ function selectedIcon() {
 </script>
 
 <template>
-    <Icon :class="class" />
+    <Icon :class="class" :alt="alt" />
 </template>
