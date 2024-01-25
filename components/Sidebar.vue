@@ -10,13 +10,11 @@ const { data } = await useFetch('/api/menu')
     <div class="sidebar">
       <div class="main">
         <div class="top-sidebar">
-          <div class="flex">
-            <img src="/assets/images/jurisoft-icon.svg" alt="Jurisoft Lofo" />
-            <div class="info">
-              <h1>Jurisoft</h1>
-              <p>Marketing Jurídico</p>
-            </div>
-          </div>
+          <UserThumb
+            image="/jurisoft-icon.svg"
+            name="Jurisoft"
+            description="Marketing Jurídico"
+          />
           <div class="action">
             <button type="button">
               <JurIcon icon="arrow" />

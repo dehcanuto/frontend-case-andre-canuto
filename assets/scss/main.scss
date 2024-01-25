@@ -73,6 +73,24 @@ main {
 .top-sidebar {
     display: flex;
     justify-content: space-between;
+    .action {
+        display: flex;
+        button {
+            padding: 10px;
+            margin: auto;
+            background: #fff;
+            border: none;
+        }
+    }
+}
+
+.user-info {
+    display: flex;
+    img {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+    }
     .info {
         margin: auto;
         margin-left: 10px;
@@ -86,15 +104,6 @@ main {
         p {
             color: $text-500;
             font-size: 12px;
-        }
-    }
-    .action {
-        display: flex;
-        button {
-            padding: 10px;
-            margin: auto;
-            background: #fff;
-            border: none;
         }
     }
 }

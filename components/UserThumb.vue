@@ -17,7 +17,7 @@ defineProps({
 })
 </script>
 <template>
-  <div class="flex">
+  <div class="user-info">
     <NuxtImg :src="image" :alt="name" loading="lazy" />
     <div class="info">
       <h1>{{ name }}</h1>
