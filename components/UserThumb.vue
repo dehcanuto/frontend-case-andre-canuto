@@ -13,6 +13,10 @@ defineProps({
     description: {
         type: String,
         required: true
+    },
+    fontLabel: {
+      type: String,
+      default: 'normal'
     }
 })
 </script>
@@ -20,7 +24,7 @@ defineProps({
   <div class="user-info">
     <NuxtImg :src="image" :alt="name" loading="lazy" />
     <div class="info">
-      <h1>{{ name }}</h1>
+      <h3 :class="`font-${fontLabel}`">{{ name }}</h3>
       <p>{{ description }}</p>
     </div>
   </div>

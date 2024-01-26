@@ -34,7 +34,8 @@ const iconList = new Map<string, any>([
     ['play', _icon.Play],
     ['pause', _icon.Pause],
     ['stop', _icon.Stop],
-    ['monday-logo', _icon.MondayLogo]
+    ['monday-logo', _icon.MondayLogo],
+    ['options', _icon.Options]
 ]);
 
 function selectedIcon() {

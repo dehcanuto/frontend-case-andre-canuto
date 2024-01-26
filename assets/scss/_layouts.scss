@@ -1,3 +1,10 @@
+@mixin rowSpaced($direction: column, $align: center) {
+    display: flex;
+    align-items: $align;
+    justify-content: space-between;
+    flex-direction: $direction;
+}
+
 .flex {
     display: flex;
 }
@@ -8,6 +15,14 @@
 
 .justify-between {
     justify-content: space-between;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 500;
 }
 
 .divider-top {
@@ -22,5 +37,16 @@
     gap: 20px;
     &-span-2 {
         grid-column: span 2/span 2;
+    }
+}
+
+.list-items {
+    @include rowSpaced($align: initial);
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 5px;
+    .item {
+        @include rowSpaced($direction: row);
     }
 }

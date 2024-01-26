@@ -52,8 +52,14 @@ function resetTime() {
             <BaseButton icon="arrow" type="outline" />
         </div>
         <div class="content">
-            <h4 v-if="running">Em andamento</h4>
-            <h4 v-else>Aguardando</h4>
+            <h4 class="session-title">
+                <template v-if="running">
+                    Em andamento
+                </template>
+                <template v-else>
+                    Aguardando
+                </template>
+            </h4>
             <div class="clock">
                 <span>{{ pad( hours ) }}</span>
                 <span>:{{ pad( minutes ) }}</span>

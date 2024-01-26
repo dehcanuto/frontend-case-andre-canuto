@@ -20,3 +20,4 @@ export { default as Play } from './PlayIcon.vue';
 export { default as Pause } from './PauseIcon.vue';
 export { default as Stop } from './StopIcon.vue';
 export { default as MondayLogo } from './MondayLogoIcon.vue';
+export { default as Options } from './OptionsIcon.vue';

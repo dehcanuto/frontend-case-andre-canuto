@@ -5,6 +5,7 @@
       icon="timer-rush"
       button-title="Histórico">
       <TimeTracker />
+      <PreviousTasks />
     </Card>
     <div class="col">
       <Card
