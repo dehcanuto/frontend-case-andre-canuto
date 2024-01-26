@@ -204,3 +204,64 @@ main {
 .previous-tasks {
     margin-top: 1rem;
 }
+
+.work-progress {
+    &-title {
+        color: $text-500;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 20px 0;
+    }
+    &-bar {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 6px;
+        span {
+            width: 100%;
+            height: 10px;
+            border-radius: 2px;
+        }
+        &-rest {
+            background: #F2AE40;
+        }
+        &-active {
+            background: #35B9E9;
+        }
+        &-extra {
+            background: #6E3FF3;
+        }
+    }
+    &-labels {
+        &-list {
+            display: flex;
+            gap: 16px;
+            padding-left: 0;
+            list-style: none;
+            &-item {
+                display: flex;
+                gap: 4px;
+                align-items: center;
+                color: $text-500;
+                font-size: 12px;
+                font-weight: 400;
+                .dot {
+                    display: flex;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 100%;
+                    background: $stroke-soft;
+                    &.rest {
+                        background: #F2AE40;
+                    }
+                    &.active {
+                        background: #35B9E9;
+                    }
+                    &.extra {
+                        background: #6E3FF3;
+                    }
+                }
+            }
+        }
+    }
+}

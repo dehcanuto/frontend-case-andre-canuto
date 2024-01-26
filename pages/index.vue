@@ -12,7 +12,7 @@
         title="Horas diárias de trabalho"
         icon="timer"
         button-title="Detalhes">
-        <p>Teste</p>
+        <DailyWorks />
       </BaseCard>
       <BaseCard
         title="Cursos - Progresso"
