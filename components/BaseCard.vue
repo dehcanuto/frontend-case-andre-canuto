@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="BaseCard">
+    <div class="card">
         <div class="header">
             <div class="infos">
                 <BaseIcon v-if="icon" :icon="icon" />

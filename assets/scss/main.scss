@@ -134,48 +134,6 @@ main {
     }
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    font-size: 14px;
-    color: $text-500;
-    background: #fff;
-    border: 1px solid $stroke-soft;
-    border-radius: 10px;
-    &-primary {
-        color: #fff;
-        background: $theme-color;
-        border-color: $theme-color;
-        &-outline {
-            color: $theme-color;
-            background: transparent;
-            border: none;
-        }
-    }
-    &-outline {
-        background: transparent;
-        border: none;
-    }
-}
-
-.BaseCard {
-    padding: 10px;
-    border: 1px solid $stroke-soft;
-    border-radius: 16px;
-    .header {
-        @include rowSpaced($direction: row);
-        h3 {
-            font-size: 16px;
-        }
-        .infos {
-            display: flex;
-            gap: 10px
-        }
-    }
-}
-
 .time-tracker {
     overflow: hidden;
     margin-top: 10px;
