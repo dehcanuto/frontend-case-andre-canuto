@@ -13,7 +13,7 @@ defineProps({
     type="button"
     :class="`btn btn-${type} ${className}`" 
     @click="() => emit('click')">
-    <JurIcon v-if="icon" :icon="icon" />
+    <BaseIcon v-if="icon" :icon="icon" />
     <slot />
   </button>
 </template>

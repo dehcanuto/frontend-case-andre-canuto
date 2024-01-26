@@ -8,10 +8,10 @@ defineProps({
 </script>
 
 <template>
-    <div class="card">
+    <div class="BaseCard">
         <div class="header">
             <div class="infos">
-                <JurIcon v-if="icon" :icon="icon" />
+                <BaseIcon v-if="icon" :icon="icon" />
                 <h3>{{ title }}</h3>
             </div>
             <BaseButton v-if="buttonTitle">{{ buttonTitle }}</BaseButton>

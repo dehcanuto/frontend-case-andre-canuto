@@ -46,7 +46,7 @@ function resetTime() {
     <div class="time-tracker">
         <div class="header">
             <div class="title">
-                <JurIcon icon="monday-logo" />
+                <BaseIcon icon="monday-logo" />
                 <h3>Track App</h3>
             </div>
             <BaseButton icon="arrow" type="outline" />

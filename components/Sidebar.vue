@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import JurIcon from '../components/JurIcon.vue';
+import BaseIcon from '../components/BaseIcon.vue';
 
 const { data } = await useFetch('/api/menu')
 
@@ -18,7 +18,7 @@ const { data } = await useFetch('/api/menu')
           />
           <div class="action">
             <button type="button">
-              <JurIcon icon="arrow" />
+              <BaseIcon icon="arrow" />
             </button>
           </div>
         </div>
@@ -29,7 +29,7 @@ const { data } = await useFetch('/api/menu')
               <li v-for="(item, index) in data">
                 <NuxtLink :key="index" :to="item.to" class="menu-item">
                   <div class="label">
-                    <JurIcon :icon="item.icon" class="icon" />
+                    <BaseIcon :icon="item.icon" class="icon" />
                     {{ item.label }}
                   </div>
                 </NuxtLink>
@@ -50,7 +50,7 @@ const { data } = await useFetch('/api/menu')
         />
         <div class="action">
           <button type="button">
-            <JurIcon icon="arrow" />
+            <BaseIcon icon="arrow" />
           </button>
         </div>
       </div>

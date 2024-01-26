@@ -2127,10 +2127,10 @@ cssnano-preset-default@^6.0.3:
     postcss-calc "^9.0.1"
     postcss-colormin "^6.0.2"
     postcss-convert-values "^6.0.2"
-    postcss-discard-comments "^6.0.1"
-    postcss-discard-duplicates "^6.0.1"
-    postcss-discard-empty "^6.0.1"
-    postcss-discard-overridden "^6.0.1"
+    postcss-disBaseCard-comments "^6.0.1"
+    postcss-disBaseCard-duplicates "^6.0.1"
+    postcss-disBaseCard-empty "^6.0.1"
+    postcss-disBaseCard-overridden "^6.0.1"
     postcss-merge-longhand "^6.0.2"
     postcss-merge-rules "^6.0.3"
     postcss-minify-font-values "^6.0.1"
@@ -4114,24 +4114,24 @@ postcss-convert-values@^6.0.2:
     browserslist "^4.22.2"
     postcss-value-parser "^4.2.0"
 
-postcss-discard-comments@^6.0.1:
+postcss-disBaseCard-comments@^6.0.1:
   version "6.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-discard-comments/-/postcss-discard-comments-6.0.1.tgz#46176212bd9c3e5f48aa4b8b4868786726c41d36"
+  resolved "https://registry.yarnpkg.com/postcss-disBaseCard-comments/-/postcss-disBaseCard-comments-6.0.1.tgz#46176212bd9c3e5f48aa4b8b4868786726c41d36"
   integrity sha512-f1KYNPtqYLUeZGCHQPKzzFtsHaRuECe6jLakf/RjSRqvF5XHLZnM2+fXLhb8Qh/HBFHs3M4cSLb1k3B899RYIg==
 
-postcss-discard-duplicates@^6.0.1:
+postcss-disBaseCard-duplicates@^6.0.1:
   version "6.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-discard-duplicates/-/postcss-discard-duplicates-6.0.1.tgz#112b1a95948e69b3484fdd43584dda6930977939"
+  resolved "https://registry.yarnpkg.com/postcss-disBaseCard-duplicates/-/postcss-disBaseCard-duplicates-6.0.1.tgz#112b1a95948e69b3484fdd43584dda6930977939"
   integrity sha512-1hvUs76HLYR8zkScbwyJ8oJEugfPV+WchpnA+26fpJ7Smzs51CzGBHC32RS03psuX/2l0l0UKh2StzNxOrKCYg==
 
-postcss-discard-empty@^6.0.1:
+postcss-disBaseCard-empty@^6.0.1:
   version "6.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-discard-empty/-/postcss-discard-empty-6.0.1.tgz#b34cb45ec891246da4506b53e352390fdef126c4"
+  resolved "https://registry.yarnpkg.com/postcss-disBaseCard-empty/-/postcss-disBaseCard-empty-6.0.1.tgz#b34cb45ec891246da4506b53e352390fdef126c4"
   integrity sha512-yitcmKwmVWtNsrrRqGJ7/C0YRy53i0mjexBDQ9zYxDwTWVBgbU4+C9jIZLmQlTDT9zhml+u0OMFJh8+31krmOg==
 
-postcss-discard-overridden@^6.0.1:
+postcss-disBaseCard-overridden@^6.0.1:
   version "6.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-discard-overridden/-/postcss-discard-overridden-6.0.1.tgz#c63c559237758d74bc505452393a64dda9b19ef4"
+  resolved "https://registry.yarnpkg.com/postcss-disBaseCard-overridden/-/postcss-disBaseCard-overridden-6.0.1.tgz#c63c559237758d74bc505452393a64dda9b19ef4"
   integrity sha512-qs0ehZMMZpSESbRkw1+inkf51kak6OOzNRaoLd/U7Fatp0aN2HQ1rxGOrJvYcRAN9VpX8kUF13R2ofn8OlvFVA==
 
 postcss-merge-longhand@^6.0.2:
