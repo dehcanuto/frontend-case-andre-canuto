@@ -32,6 +32,8 @@ const iconList = new Map<string, any>([
     ['bests', _icon.Bests],
     ['feedback', _icon.Feedback],
     ['play', _icon.Play],
+    ['pause', _icon.Pause],
+    ['stop', _icon.Stop],
     ['monday-logo', _icon.MondayLogo]
 ]);
 

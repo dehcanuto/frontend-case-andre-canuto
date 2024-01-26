@@ -206,14 +206,27 @@ main {
         }
         button {
             cursor: pointer;
+            padding: 0 20px;
             margin: auto;
-            &:hover {
-                background: $bg-weak-100;
-            }
+            border-radius: 0;
         }
         .actions {
             display: flex;
             align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            button {
+                margin: 0;
+            }
+            button + button {
+                border-left: 1px solid $stroke-soft;
+            }
+            .pause {
+                color: $text-900;
+            }
+            .stop {
+                color: $error;
+            }
         }
     }
     .clock {

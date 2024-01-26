@@ -1,40 +1,44 @@
 <script setup lang="ts">
-const active = ref<boolean>(false);
+const running = ref<boolean>(false);
 
+const fullTime = ref<number>(0);
 const hours = ref<number>(0);
 const minutes = ref<number>(0);
 const seconds = ref<number>(0);
 
-function clearTime() {
-    pauseTime()
-    hours.value = 0;
-    minutes.value = 0;
-    seconds.value = 0;
+let timer: ReturnType<typeof setInterval> | null = null;
+
+function formatTime(updateTime: any) {
+    seconds.value = updateTime % 60;
+    minutes.value = Math.floor(updateTime / 60) % 60;
+    hours.value = Math.floor(updateTime / 3600);
 }
 
-function pauseTime() {
-    active.value = false;
+function pad (number: number) {
+    if (number < 10) {
+        return '0' + number;
+    }
+    return number;
 }
 
 function startTime() {
-    active.value = true;
+    if (!running.value) {
+        running.value = true;
+        timer = setInterval(() => {
+            formatTime(fullTime.value++);
+        }, 1000);
+    }
+}
 
-    const timer = setInterval(() => {
-        !active.value && clearInterval(timer);
+function pauseTime() {
+      running.value = false;
+      if (timer) clearInterval(timer);
+}
 
-        if (seconds.value === 59) {
-            if (minutes.value === 59) {
-                hours.value += 1;
-                minutes.value = 0;
-                seconds.value = 0;
-                return;
-            }
-            minutes.value += 1;
-            seconds.value = 0;
-            return;
-        }
-        seconds.value += 1;
-    }, 1000);
+function resetTime() {
+      running.value = false;
+      fullTime.value = 0;
+      if (timer) clearInterval(timer);
 }
 </script>
 
@@ -48,25 +52,25 @@ function startTime() {
             <BaseButton icon="arrow" type="outline" />
         </div>
         <div class="content">
-            <h4 v-if="active">Em andamento</h4>
+            <h4 v-if="running">Em andamento</h4>
             <h4 v-else>Aguardando</h4>
             <div class="clock">
-                <span>{{ hours }}</span>
-                <span>:{{ minutes }}</span>
-                <span class="seconds">:{{ seconds }}</span>
+                <span>{{ pad( hours ) }}</span>
+                <span>:{{ pad( minutes ) }}</span>
+                <span class="seconds">:{{ pad( seconds ) }}</span>
             </div>
-            <div>
-                <BaseButton icon="play" type="primary-outline" @click="() => startTime()">
+            <div class="actions">
+                <BaseButton v-if="!running" icon="play" type="primary-outline" @click="() => startTime()">
                     Iniciar
                 </BaseButton>
-                <div class="actions">
-                    <BaseButton icon="play" type="primary-outline" @click="() => pauseTime()">
+                <template v-else>
+                    <BaseButton className="pause" icon="pause" type="primary-outline" @click="() => pauseTime()">
                         Pausar
                     </BaseButton>
-                    <BaseButton icon="play" type="primary-outline" @click="() => clearTime()">
+                    <BaseButton className="stop" icon="stop" type="primary-outline" @click="() => resetTime()">
                         Parar
                     </BaseButton>
-                </div>
+                </template>
             </div>
         </div>
     </div>
