@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import * as _icon from '../assets/images/icons';
+import * as _icon from '../../assets/images/icons';
 
  const props = defineProps({
     icon: {
