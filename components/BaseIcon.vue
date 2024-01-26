@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed, defineProps } from 'vue';
 import * as _icon from '../assets/images/icons';
 
  const props = defineProps({

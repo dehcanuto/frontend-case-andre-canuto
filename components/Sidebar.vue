@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import BaseIcon from '../components/BaseIcon.vue';
-
 const { data } = await useFetch('/api/menu')
 
 </script>

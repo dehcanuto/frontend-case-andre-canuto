@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { data } = await useFetch('/api/tasks')
-
 </script>
 
 <template>
