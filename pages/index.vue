@@ -11,14 +11,16 @@
       <BaseCard
         title="Horas diárias de trabalho"
         icon="timer"
-        button-title="Detalhes">
+        button-title="Detalhes"
+        headerBorder>
         <DailyWorks />
       </BaseCard>
       <BaseCard
         title="Cursos - Progresso"
         icon="courses"
-        button-title="Ver todos">
-        <p>Teste</p>
+        button-title="Ver todos"
+        headerBorder>
+        <CoursesProgress />
       </BaseCard>
     </div>
     <BaseCard
@@ -37,7 +39,8 @@
     </div>
       <BaseCard
         title="Feedback diário"
-        icon="feedback">
+        icon="feedback"
+        headerBorder>
         <p>Teste</p>
       </BaseCard>
   </div>
