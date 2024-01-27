@@ -223,12 +223,15 @@ main {
             border-radius: 2px;
         }
         &-rest {
+            width: 22%;
             background: #F2AE40;
         }
         &-active {
+            width: 60%;
             background: #35B9E9;
         }
         &-extra {
+            width: 18%;
             background: #6E3FF3;
         }
     }
@@ -289,6 +292,7 @@ main {
 .courses-progress {
     @include rowSpaced($direction: row);
     gap: 20px;
+    margin-bottom: 10px;
     &-info {
         h3 {
             font-size: 14px;
