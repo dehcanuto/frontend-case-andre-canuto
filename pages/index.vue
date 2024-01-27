@@ -34,7 +34,7 @@
         title="Cursos"
         icon="courses"
         button-title="Ver todos">
-        <p>Teste</p>
+        <CoursesTeachers />
       </BaseCard>
     </div>
       <BaseCard

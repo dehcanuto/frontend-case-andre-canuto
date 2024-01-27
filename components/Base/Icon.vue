@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import * as _icon from '../../assets/images/icons';
 
- const props = defineProps({
+const props = defineProps({
     icon: {
         type: String,
         required: true,
     },
     class: String,
     alt: String,
-})
+});
 
 const Icon = computed(() => selectedIcon());
 const iconList = new Map<string, any>([
@@ -34,7 +34,9 @@ const iconList = new Map<string, any>([
     ['pause', _icon.Pause],
     ['stop', _icon.Stop],
     ['monday-logo', _icon.MondayLogo],
-    ['options', _icon.Options]
+    ['options', _icon.Options],
+    ['in-progress', _icon.InProgress],
+    ['done', _icon.Done]
 ]);
 
 function selectedIcon() {

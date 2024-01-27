@@ -9,6 +9,18 @@ h1, h2, h3, h4, p {
     margin: 0;
 }
 
+h3 {
+    color: $text-500;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+p {
+    color: $text-500;
+    font-size: 12px;
+    font-weight: 400;
+}
+
 .session-title {
     color: $text-400;
     font-size: 11px;
@@ -124,7 +136,6 @@ main {
         margin: auto;
         margin-left: 10px;
         h3 {
-            font-size: 14px;
             margin-bottom: 5px;
         }
         p {
@@ -136,7 +147,6 @@ main {
 
 .time-tracker {
     overflow: hidden;
-    margin-top: 10px;
     border: 1px solid $stroke-soft;
     border-radius: 10px;
     .header {
@@ -148,11 +158,6 @@ main {
             display: flex;
             align-items: center;
             gap: 10px;
-            h3 {
-                color: $text-500;
-                font-size: 14px;
-                font-weight: 400;
-            }
         }
     }
     .content {
@@ -269,6 +274,37 @@ main {
     }
 }
 
+.line-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &-percentage {
+        color: $text-500;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    &-container {
+        position: relative;
+        width: 100%;
+        &-bar {
+            width: 100%;
+            min-width: 77px;
+            height: 6px;
+            background: $stroke-soft;
+            border-radius: 10px;
+            overflow: hidden;
+            &-fill {
+                --percentage: 0%;
+                display: flex;
+                width: var(--percentage);
+                height: 6px;
+                background: $theme-color;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
 .radial-progress {
     --percentage: 0%;
     position: relative;
@@ -283,7 +319,6 @@ main {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 14px;
         font-weight: 500;
         color: #0A0D14;
     }
@@ -309,5 +344,19 @@ main {
             font-size: 12px;
             font-weight: 500;
         }
+    }
+}
+
+.tag-progress {
+    gap: 5px;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    width: max-content;
+    border: 1px solid $stroke-soft;
+    border-radius: 6px;
+    span {
+        font-size: 12px;
+        font-weight: 400;
     }
 }

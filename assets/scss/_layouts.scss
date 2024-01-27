@@ -21,6 +21,18 @@
     justify-content: space-between;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .font-normal {
     font-weight: 400;
 }
@@ -76,6 +88,7 @@
     border-radius: 16px;
     .header {
         @include rowSpaced($direction: row);
+        margin-bottom: 10px;
         h3 {
             font-size: 16px;
             font-weight: 500;
@@ -100,5 +113,27 @@
     margin-bottom: 5px;
     .item {
         @include rowSpaced($direction: row);
+    }
+}
+
+.base-table {
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    border-collapse: collapse;
+    thead {
+        background: $bg-weak-100;
+        border-radius: 18px;
+        th {
+            color: $text-500;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 8px 12px;
+        }
+    }
+    tbody {
+        th, td {
+            padding: 10px 20px;
+        }
     }
 }

@@ -21,3 +21,5 @@ export { default as Pause } from './PauseIcon.vue';
 export { default as Stop } from './StopIcon.vue';
 export { default as MondayLogo } from './MondayLogoIcon.vue';
 export { default as Options } from './OptionsIcon.vue';
+export { default as InProgress } from './InProgressIcon.vue';
+export { default as Done } from './DoneIcon.vue';
